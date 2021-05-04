@@ -39,6 +39,15 @@ class UserLoginForm(forms.Form):
         return authenticate(request, username=uname, password=pword)
 
 
+class EditUserForm(forms.ModelForm):
+    first_name = forms.CharField(max_length=50, required=False)
+    last_name = forms.CharField(max_length=50, required=False)
+     
+    class Meta:
+        model = CustomUser
+        fields=('first_name','last_name')
+
+
 
 
 # class UpdateUserForm(ModelForm):

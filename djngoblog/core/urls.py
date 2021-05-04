@@ -29,7 +29,7 @@ urlpatterns = [
    
     # path('accounts/', include('django.csontrib.auth.urls')),
     
-    path('dashboard', CreatedArticleView.as_view(template_name='dashboard.html'), name='dashboard'),
+    path('dashboard', CreatedArticleView.as_view(), name='dashboard'),
     path('home/', IndexView.as_view(template_name='home.html'), name='home'),
     path('accounts/',include(('users.urls'),namespace='users')), 
     path('posts/',include(('posts.urls'), namespace='posts')),

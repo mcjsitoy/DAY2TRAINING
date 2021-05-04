@@ -1,10 +1,21 @@
-{% load static %}
-<ul class ="nav">
-    <li><a class="home" href="{% url 'users:login' %}">|Log In|</a></li>
-    <li><a class ="home" href="{% url 'users:signup' %}">|SignUp|</a></li>
-    </ul>
-    
-{% block content %}
-
-
-{% endblock %}
+{%load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<html>
+<div class="navbar">
+    <a class="navbar-brand" href="{% url 'dashboard' %}">
+        <button>
+          Home
+        </button>
+  </a>
+    <div class="dropdown">
+      <button class="dropbtn">{{user.get_full_name}}
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a class = "dropdownlink" href="{% url 'users:view_profile' user.pk %}">Profile</a>
+        <a class = "dropdownlink" href="{% url 'users:edit_profile' user.pk %}">Settings</a>
+        <a class = "dropdownlink" href="{% url 'users:logout' %}">Logout</a>
+      </div>
+    </div>
+  </div> 
+</html>

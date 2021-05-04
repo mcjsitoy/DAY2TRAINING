@@ -107,49 +107,36 @@ class CreateArticleView(TemplateView):
         #         articles = Articles.objects.all()
         #         context={'articles':articles,}
         
-class ArticleDetailView(DetailView):
-    model = Articles
-    template_name ='article_details.html'      
+class ArticleDetailView(TemplateView):
+    def get(self, request, *args, **kwargs):
+        
+        pk = kwargs.get('pk')
+        if request.user.is_authenticated:
+            article = get_object_or_404(Articles, pk=pk  )
+                              
+            context ={
+            'article': article, 'pk':pk
+            }                                                           
+            return render(request, 'article_details.html', context)
+        return render(request, 'dashboard.html',)
 
 
-# class UpdateArticleView(UpdateView):
-#     model = Articles
-#     form = CreateArticle
-#     template_name = 'update_articles.html'
-#     fields = ['title','description','content']
+
     
-
-
-        
-       
-        
-
-        
-
-
-
 class CreatedArticleView(TemplateView):
-
-    template_name='dashboard'
-   
-
     def get(self, request):
         if request.user.is_authenticated:
             try:
                 articlet = Articles.objects.all()
                 context ={
-                'articlet': articlet,
-            }
-           
+                'articlet': articlet, 
+            }           
             except Articles.DoesNotExist:
-                raise Http404("No Articles Found")
-               
-            
-              
-            return render(request, self.template_name, context)
+                raise Http404("No Articles Found")                                         
+            return render(request, 'dashboard.html', context)
         else:
             form = UserLoginForm()
-            return render(request,'users/login.html', {'form':form})
+            return render(request,'registration/login.html', {'form':form})
     
 
 

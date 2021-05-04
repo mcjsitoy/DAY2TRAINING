@@ -6,20 +6,21 @@
 {% block content %}
 
 <div class="articles">
-    <div class="row"><p>{{articles.title}}</p>    
-    <p>{{articles.description}}</p>
-    <p>{{articles.content}}</p>
-    <p>By:{{articles.owner}}</p>
+    <div class="row">
+    <p>{{article.title}}</p>    
+    <p>{{article.description}}</p>
+    <p>{{article.content}}</p>
+    <p>By:{{article.owner}}</p>
     </div>
    
     
 <br>
     <div class="row">
 {% if user.is_authenticated %}
-    {% if user.id == articles.owner.id %}
-        <a href="{% url 'posts:update_article' articles.pk %}"><button type="button" class="btn btn-danger">Edit</button></a> 
+    {% if user.id == article.owner.id %}
+        <a href="{% url 'posts:update_article' article.pk %}"><button type="button" class="btn btn-danger">Edit</button></a> 
        
-        <a href="{% url 'posts:delete_article' articles.pk %}"><button type="button" class="btn btn-danger">Delete</button></a>
+        <a href="{% url 'posts:delete_article' article.pk %}"><button type="button" class="btn btn-danger">Delete</button></a>
     {% endif %}
 {% endif %}
     </div>
