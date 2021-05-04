@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<html>
+  {% block content %}
+  
+  
+  
+ 
+  <body>
+   
+    <div class="signform">
+      
+    <form action ="{%url 'users:signup'%}" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="row align-items-center">
+      
+        <div class="col">          
+            {{ field.label_tag }}
+            {{ field }}
+            {% if field.help_text %}
+          <small style="color: mediumaquamarine">{{ field.help_text }}</small>
+            {% endif %}
+          
+        </div>
+    
+    </div>
+    {% endfor %}
+      <br>
+      <div class="signupbutton">
+      <button type="submit">Sign up</button>
+      </div>
+      {% endblock %}
+    </form>
+  </div>
+  </body>
+</html>

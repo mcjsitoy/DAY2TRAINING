@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+<html>
+<head>
+
+    {% block content %}
+<p>You are not logged in</p>
+
+
+</head>
+<ul class ="nav">
+    <li><a class="home" href="{% url 'users:login' %}">|Log In|</a></li>
+    <li><a class ="home" href="{% url 'users:signup' %}">|SignUp|</a></li>
+    </ul>
+
+
+<body>
+    <main>
+{% csrf_token %}
+
+
+
+{% endblock %}
+    </main>
+
+</body>
+</html>

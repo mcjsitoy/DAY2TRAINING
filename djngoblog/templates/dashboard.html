@@ -1,0 +1,59 @@
+
+{% extends 'base.html' %}
+{% block content %}
+    <div class ="articles">
+      
+     <div clas="text-center">
+      {% for articles in articlet %}
+          <h2>
+              <a href ="{% url 'posts:article_details' articles.pk %}">
+                 {{articles.title}}
+              </a>
+          </h2>      
+         
+         </a>
+         
+      {% endfor %} 
+      <a href="{% url 'posts:create_article' %}" class="btn btn-inverse-primary btn-fw" name = "createarticlebut">
+        <button>Create Article</button>
+  </div>
+  
+
+    </div> 
+{% endblock %}
+ 
+ 
+ 
+ 
+ 
+
+    
+   
+      
+
+ 
+
+  
+
+
+
+
+
+
+
+<body>
+    <main>
+      <div>
+      
+
+      </div>
+
+        
+    
+
+    </main>
+</body>
+
+
+
+</html>

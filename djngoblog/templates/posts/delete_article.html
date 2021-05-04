@@ -1,0 +1,14 @@
+<h1>{{ articles.title }}   </h1>
+<h2>{{articles.description}}</h2>
+<body>{{articles.content}}</body>
+
+
+<div>
+    <form method="POST">
+        <!-- Security token by Django -->
+        {% csrf_token %}
+        Are you sure you want to delete this item ?
+        <input type="submit" value="Yes" />
+        <a href="{% url 'posts:article_details' articles.pk %}">Cancel </a>
+    </form>
+</div>

@@ -1,0 +1,239 @@
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color:mediumaquamarine;
+    text-align: right;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: mediumaquamarine;
+    
+    font-size: 25;
+}
+
+body {
+    
+   background-color: cornsilk(46, 121, 206, 0.801);
+   background-image: url('/static/users/dbg.jpg');
+ 
+    
+   }
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    color:mediumaquamarine;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a.home{
+    color:cornsilk;
+}
+
+a.home:hover{
+    color:grey;
+}
+
+a:hover{
+    color:mediumaquamarine
+}
+
+
+
+button{
+    background-color: cornsilk;
+    font-size: 22px;
+    border-radius: 10px;
+    color:mediumaquamarine;
+    border-color: rgb(59, 150, 119);
+    text-align: center;
+    
+    
+    
+}
+
+button.loginbutton{
+    margin: 0 auto;
+    
+}
+
+button:hover{
+    background-color: mediumaquamarine;
+    color: cornsilk;
+
+}
+
+.nav{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-color:cornsilk;
+    background-color: mediumaquamarine;
+    
+}
+.nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    color:cornsilk;
+    
+  }
+
+
+.label{
+    color:mediumaquamarine;
+
+}
+
+
+.loginfrm {
+    color: mediumaquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    align-items: center;
+}
+
+.loginbox{
+display: flex;
+justify-content: center;
+border-color: mediumaquamarine;
+border-style: solid;
+margin: 0px;
+padding: 25px 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+.navbar{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-color:cornsilk;
+    background-color: mediumaquamarine;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: mediumaquamarine;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    outline: none;
+    color: mediumaquamarine;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    color:mediumaquamarine;
+    
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    color:mediumaquamarine;
+  }
+  
+  
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  a.logsign{
+      color:mediumaquamarine;
+  }
+  a.logsign:hover{
+      color:grey;
+
+  }
+
+  .logo-image{  
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: -6px;
+    
+  }
+  .articles{
+    display: flex;
+    justify-content: center;
+    border-color: mediumaquamarine;
+    border-style: solid;
+    margin: 0px;
+    padding: 25px 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .signform{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-color: mediumaquamarine;
+    border-style: solid;
+    margin: 0px;
+    padding: 25px 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+  }
+  .helptext{
+    visibility: hidden;
+  }
+
+  .col{
+    font-family: Arial, Helvetica, sans-serif;
+    color: mediumaquamarine;
+
+    
+    font-size: 25;
+
+  }
+
+  .signupbutton {
+      text-align: center;
+      font-size: 24px !important;
+  }
+
+  .loginbutton{
+      text-align: center;
+  }
+
+ 
+  
+
+  

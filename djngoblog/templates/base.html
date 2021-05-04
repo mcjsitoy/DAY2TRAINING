@@ -1,0 +1,50 @@
+{%load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<!-- CSS only -->
+
+
+<html>
+{% if user.is_authenticated %}
+    <div class="navbar">
+      <a class="navbar-brand" href='/dashboard'>
+          <button>
+            Home
+          </button>
+    </a>
+      <div class="dropdown">
+        <button class="dropbtn">{{user.get_full_name}}
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a class = "dropdownlink" href="{% url 'users:view_profile' user.pk %}">Profile</a>
+          <a class = "dropdownlink" href="{% url 'users:edit_profile' user.pk %}">Settings</a>
+          <a class = "dropdownlink" href="{% url 'users:logout' %}">Logout</a>
+        </div>
+      </div>
+    </div> 
+{% else %}
+    <div class="navbar">
+      <a class="navbar-brand" href="/home/">
+          <div class="logo-image">
+                <img src="{% static 'img/redfolder.ico' %}" class="img-fluid">
+          </div>
+      </a>
+    </div>
+{% endif %}
+  
+  <head>
+  <meta charset="utf-8">
+  <meta charset="utf-8">
+        
+  
+  </head>
+<body>
+  
+    {% block content %}
+    
+    {% endblock %}
+  
+</body>
+</html>
+
+
